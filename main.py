@@ -1,4 +1,5 @@
 import csv
+import timeit
 
 class Graph:
     def __init__(self):
@@ -54,3 +55,4 @@ with open('graph.csv', 'r', newline='') as file:
 g=Graph()
 g.read(v)
 g.process()
+print(timeit.Timer(g.process).timeit(number=1))
